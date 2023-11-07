@@ -32,6 +32,11 @@ spec:
                 secretKeyRef:
                   name: es-ads-basic-authen
                   key: password
+            - name: SLACK_URI
+              valueFrom:
+                secretKeyRef:
+                  name: cron-secret
+                  key: slack-uri
 
             volumeMounts:
             - name: scripts

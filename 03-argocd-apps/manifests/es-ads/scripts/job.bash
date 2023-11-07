@@ -19,8 +19,7 @@ gsutil cp ${EXPORTED_FILE} ${GCS_PATH}
 
 FILE_SIZE=$(stat -c%s ${EXPORTED_FILE})
 TMP_TEMPLATE=/tmp/${FNAME}-slack.json
-CHANNEL=T0109UD5JVC/B03L91966HG/dt2gQLFpmUTaHsYMgL1qJCSr
-SLACK_URI=https://hooks.slack.com/services/${CHANNEL}
+# NOTE : SLACK_URI is injected via env variable
 OBJECT_CNT=$(wc -l ${EXPORTED_FILE} | cut -d' ' -f1)
 
 cat << EOF > ${TMP_TEMPLATE}
