@@ -19,7 +19,10 @@ spec:
             - /scripts/job.bash
             env:
             - name: ES_USER
-              value: elastic
+              valueFrom:
+                secretKeyRef:
+                  name: es-ads-basic-authen
+                  key: username
             - name: GOOGLE_APPLICATION_CREDENTIALS 
               value: /secrets/gcp-sa.json
             - name: BUCKET_NAME
@@ -27,8 +30,8 @@ spec:
             - name: ES_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: es-soc-es-elastic-user
-                  key: elastic
+                  name: es-ads-basic-authen
+                  key: password
 
             volumeMounts:
             - name: scripts
