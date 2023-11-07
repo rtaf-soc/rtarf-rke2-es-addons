@@ -26,7 +26,7 @@ spec:
               memory: 2Gi
               cpu: 1
             limits:
-              memory: 2Gi
+              memory: 4Gi
     config:
       node.store.allow_mmap: true
       node.roles: ["master"]
@@ -60,7 +60,7 @@ spec:
               memory: 2Gi
               cpu: 2
             limits:
-              memory: 2Gi
+              memory: 4Gi
     config:
       node.store.allow_mmap: true
       node.roles: ["data"]
