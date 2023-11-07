@@ -84,7 +84,21 @@ spec:
         matchers:
           - matchType: =~
             name: alertname
-            value: 'KubeControllerManagerDown|KubeProxyDown|KubeSchedulerDown|NodeClockNotSynchronising'
+            value: 'KubeControllerManagerDown|KubeProxyDown|KubeSchedulerDown|NodeClockNotSynchronising|etcdInsufficientMembers|etcdMembersDown'
+        groupInterval: 5m
+        groupWait: 30s
+        receiver: null-notifications
+        repeatInterval: 4h
+        continue: false
+      - groupBy:
+          - alertname
+        matchers:
+          - matchType: =~
+            name: alertname
+            value: 'TargetDown'
+          - matchType: =~
+            name: job
+            value: 'kube-controller-manager|kube-scheduler|kube-etcd'
         groupInterval: 5m
         groupWait: 30s
         receiver: null-notifications
