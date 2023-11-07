@@ -16,7 +16,7 @@ spec:
       source:
         repoURL: https://github.com/rtaf-soc/rtarf-rke2-es-addons.git
         targetRevision: "{{name}}" #Based on environment
-        path: 'manifests/es-ads'
+        path: '03-argocd-apps/manifests/es-ads'
       destination:
         name: in-cluster
         namespace: es-ads
