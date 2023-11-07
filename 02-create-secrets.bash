@@ -34,6 +34,10 @@ do
   fi
 done
 
+BASIC_AUTH_FILE=/tmp/generic-basic-auth.txt
+./99-utils/initial-basic-auth.sh generic-basic-auth.env ${BASIC_AUTH_FILE}
+echo "  GENERIC_BASIC_AUTHEN: $(cat "${BASIC_AUTH_FILE}" | base64 -w0)" >> ${TMP_FILE}
+
 GCP_SA=../secrets/rtarf.json
 echo "  GCP_SA: $(cat "${GCP_SA}" | base64 -w0)" >> ${TMP_FILE}
 
