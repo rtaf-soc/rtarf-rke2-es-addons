@@ -27,6 +27,9 @@ loki-stack:
       enabled: false
     config:
     alerting_groups: []
+    server:
+      grpc_server_max_recv_msg_size: 10485760 # 10 MB
+      grpc_server_max_send_msg_size: 10485760 # 10 MB
 
   grafana:
     enabled: true
