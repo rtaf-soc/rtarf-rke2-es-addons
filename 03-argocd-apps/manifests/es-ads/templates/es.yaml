@@ -61,6 +61,7 @@ spec:
               cpu: 2
             limits:
               memory: 4Gi
+              cpu: 4
     config:
       node.store.allow_mmap: true
       node.roles: ["data"]
