@@ -24,7 +24,7 @@ spec:
             - values-{{name}}.yaml
       destination:
         name: in-cluster
-        namespace: longhorn-extra
+        namespace: longhorn-system
       syncPolicy:
         automated:
           selfHeal: true
