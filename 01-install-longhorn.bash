@@ -10,7 +10,7 @@ fi
 
 export $(xargs <.env)
 
-cd "04-longhorn"
+cd "01-longhorn"
 helm dependency update
 helm upgrade -i init-longhorn . -f values-${ENV}.yaml -n longhorn-system --create-namespace
 cd ..
