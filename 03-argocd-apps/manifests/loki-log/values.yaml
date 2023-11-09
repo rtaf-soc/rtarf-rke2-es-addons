@@ -28,8 +28,8 @@ loki-stack:
     config:
     alerting_groups: []
     extraArgs:
-      server.grpc-max-recv-msg-size-bytes: "8194304"
-      server.grpc-max-send-msg-size-bytes: "8194304"
+      server.grpc-max-recv-msg-size-bytes: "52428800" #50 MB
+      server.grpc-max-send-msg-size-bytes: "52428800"
 
   grafana:
     enabled: true
