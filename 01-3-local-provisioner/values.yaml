@@ -7,7 +7,7 @@ local-static-provisioner:
     - name: fast-disks # Defines name of storage classes.
       storageClass:
         isDefaultClass: true
-      hostDir: /mnt/fast-disks
+      hostDir: /fast-disks
       volumeMode: Filesystem
       fsType: ext4
       namePattern: "*"
