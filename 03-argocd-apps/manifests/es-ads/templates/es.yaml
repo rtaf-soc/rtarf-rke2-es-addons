@@ -39,7 +39,7 @@ spec:
         resources:
           requests:
             storage: 30Gi
-        storageClassName: longhorn
+        #storageClassName: longhorn
   - name: data
     count: 3
     podTemplate:
@@ -74,7 +74,7 @@ spec:
         resources:
           requests:
             storage: 100Gi
-        storageClassName: longhorn
+        #storageClassName: longhorn
   auth:
     fileRealm:
     - secretName: es-ads-basic-authen
