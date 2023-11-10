@@ -1,0 +1,4 @@
+local-static-provisioner:
+  enabled: true
+  nameOverride: "local-provisioner"
+  fullnameOverride: "local-provisioner"

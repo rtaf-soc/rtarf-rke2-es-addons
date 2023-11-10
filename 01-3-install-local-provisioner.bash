@@ -10,7 +10,7 @@ fi
 
 export $(xargs <.env)
 
-cd "01-longhorn"
+cd "01-3-local-provisioner"
 helm dependency update
-helm upgrade -i init-longhorn . -f values-${ENV}.yaml -n longhorn-system --create-namespace
+helm upgrade -i init-local-storage ./helm/provisioner -f values-${ENV}.yaml -n local-storage-provisioner --create-namespace
 cd ..

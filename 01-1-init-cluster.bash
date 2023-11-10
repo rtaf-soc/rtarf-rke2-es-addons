@@ -10,7 +10,7 @@ fi
 
 export $(xargs <.env)
 
-cd "01-init"
+cd "01-1-init"
 helm dependency update
 helm upgrade -i init . -f values-${ENV}.yaml -n argocd --create-namespace
 cd ..
