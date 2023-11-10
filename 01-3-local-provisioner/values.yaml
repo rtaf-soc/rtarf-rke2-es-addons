@@ -8,7 +8,7 @@ local-static-provisioner:
       storageClass:
         isDefaultClass: true
       hostDir: /fast-disks
-      volumeMode: Filesystem
+      volumeMode: Block #Filesystem
       fsType: ext4
       namePattern: "*"
       blockCleanerCommand:
