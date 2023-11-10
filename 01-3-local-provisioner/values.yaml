@@ -2,3 +2,14 @@ local-static-provisioner:
   enabled: true
   nameOverride: "local-provisioner"
   fullnameOverride: "local-provisioner"
+
+  classes:
+    - name: fast-disks # Defines name of storage classes.
+      storageClass: local-disk
+      hostDir: /mnt/fast-disks
+      volumeMode: Filesystem
+      fsType: ext4
+      namePattern: "*"
+      blockCleanerCommand:
+        - "/scripts/shred.sh"
+        - "2"
